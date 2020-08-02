@@ -9,6 +9,6 @@ Notes:
 
 3) 'YUKTI' works though four scripts written using Python. The scripts "yukti.py" and "sunya.py" are both written in the 3rd version of Python but rely on "prepare_gpf4.py" and "prepare_dpf4.py" which are both written in the 2nd version of Python. All scripts except "yukti.py" run automatically as a part of the experiment and hence won't need to be executed separately.
 
-4) The scripts "prepare_gpf4.py" and "prepare_dpf4.py" are pre-included in the "AutoDock Tools" installation and were prepared by Scripps Research Institute. As of now, their versions which the creator provide alongside 'YUKTI' ("yukti.py" and "sunya.py") may be specific to the OS he was using while performing his experiments & preparing his scripts, which is Linux.
+4) The scripts "prepare_gpf4.py" and "prepare_dpf4.py" are pre-included in the "AutoDock Tools" installation and were prepared by Scripps Research Institute. As of now, their versions which the creator provides alongside 'YUKTI' ("yukti.py" and "sunya.py") may be specific to the OS he was using while performing his experiments & preparing his scripts, which is Linux.
 
 5) In file & system addresses, Windows uses "\\" while both Linux and Macintosh use "/". Using the wrong symbol will make the scripts useless by causing errors. While preparing the current version of this program, the creator was using 2 proteins as targets with 10 compounds as ligands. Your number of chosen targets and ligands may be different.
