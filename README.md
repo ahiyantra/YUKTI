@@ -11,4 +11,4 @@ Notes:
 
 4) The scripts "prepare_gpf4.py" and "prepare_dpf4.py" are pre-included in the "AutoDock Tools" installation and were prepared by Scripps Research Institute. As of now, their versions which i provide alongside 'YUKTI' ("yukti.py" and "sunya.py") may be specific to the OS i was using while performing the experiments & preparing the scripts, which is Linux.
 
-5) In file & system addresses, Windows uses "\" while both Linux and Macintosh use "/". Using the wrong symbol will make the scripts useless by causing errors. While preparing the current versions of my Python scripts, I was using 2 proteins as targets with 10 compounds as ligands. Your number of chosen targets and ligands may be different.
+5) In file & system addresses, Windows uses "\\" while both Linux and Macintosh use "/". Using the wrong symbol will make the scripts useless by causing errors. While preparing the current versions of my Python scripts, I was using 2 proteins as targets with 10 compounds as ligands. Your number of chosen targets and ligands may be different.
