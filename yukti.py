@@ -106,6 +106,8 @@ for i_variable in index:
         holderC = "python3 "+folders1[i_variable]+"/sunya.py";
         os.system(holderC);
         
+        # insert replacement code to get rid of "sunya.py"
+         
         os.chdir(folders1[i_variable]);
         
         holderD = "autogrid4 -p "+folders1[i_variable]+"/target.gpf -l "+folders1[i_variable]+"/protein.glg";
@@ -134,6 +136,8 @@ for i_variable in index:
         holderC = "python3 "+folders2[i_variable]+"/sunya.py";
         os.system(holderC);
         
+        # insert replacement code to get rid of "sunya.py"
+         
         os.chdir(folders2[i_variable]);
         
         holderD = "autogrid4 -p "+folders2[i_variable]+"/target.gpf -l "+folders2[i_variable]+"/protein.glg";
