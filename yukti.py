@@ -96,8 +96,6 @@ del numbers[0];
 autopython = "/home/number5/mgltools_x86_64Linux2_1.5.6/bin/pythonsh" # location of 'pythonsh' 
 
 for i_variable in index:
-    
-    # Space reserved in case a "for" loop is needed here.
         
         holderA = autopython+" "+folders1[i_variable]+"/prepare_gpf4.py -l "+folders1[i_variable]+"/compound_"+str(numbers[i_variable])+".pdbqt -r "+folders1[i_variable]+"/target_1.pdbqt -p npts=\'60,60,60\' -p gridcenter=\'11.112,-7.196,1.36\' -o \'"+folders1[i_variable]+"/target.gpf\'";
         os.system(holderA);
@@ -107,6 +105,21 @@ for i_variable in index:
         os.system(holderC);
         
         # insert replacement code to get rid of "sunya.py"
+
+"""
+retrieved_address = __file__;
+retrieved_address = retrieved_address.replace("sunya.py", "");
+file_path = retrieved_address+"compound_target.dpf";
+
+fin = open(file_path, "rt");
+data = fin.read();
+data = data.replace('extended', 'bound');
+fin.close();
+
+fin = open(file_path, "wt");
+fin.write(data);
+fin.close();
+"""
          
         os.chdir(folders1[i_variable]);
         
@@ -126,8 +139,6 @@ for i_variable in index:
             output.close()
             
             print("\nTarget 1's Compound "+str(i_variable+1)+" is done!\n")
-
-    # Space reserved in case a "for" loop is needed here.
         
         holderA = autopython+" "+folders2[i_variable]+"/prepare_gpf4.py -l "+folders2[i_variable]+"/compound_"+str(numbers[i_variable])+".pdbqt -r "+folders2[i_variable]+"/target_2.pdbqt -p npts=\'82,42,126\' -o \'"+folders2[i_variable]+"/target.gpf\'";
         os.system(holderA);
@@ -137,6 +148,21 @@ for i_variable in index:
         os.system(holderC);
         
         # insert replacement code to get rid of "sunya.py"
+
+"""
+retrieved_address = __file__;
+retrieved_address = retrieved_address.replace("sunya.py", "");
+file_path = retrieved_address+"compound_target.dpf";
+
+fin = open(file_path, "rt");
+data = fin.read();
+data = data.replace('extended', 'bound');
+fin.close();
+
+fin = open(file_path, "wt");
+fin.write(data);
+fin.close();
+"""
          
         os.chdir(folders2[i_variable]);
         
