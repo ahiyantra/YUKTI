@@ -107,8 +107,9 @@ for i_variable in index:
 
 """
 tempaddr = folders1[i_variable] + "/";
-retrieved_address = __file__;
-retrieved_address = retrieved_address.replace("sunya.py", "");
+#retrieved_address = __file__;
+#retrieved_address = retrieved_address.replace("sunya.py", "");
+retrieved_address = tempaddr;
 file_path = retrieved_address+"compound_target.dpf";
 
 fin = open(file_path, "rt");
@@ -151,8 +152,9 @@ fin.close();
 
 """
 tempaddr = folders2[i_variable] + "/";
-retrieved_address = __file__;
-retrieved_address = retrieved_address.replace("sunya.py", "");
+#retrieved_address = __file__;
+#retrieved_address = retrieved_address.replace("sunya.py", "");
+retrieved_address = tempaddr;
 file_path = retrieved_address+"compound_target.dpf";
 
 fin = open(file_path, "rt");
