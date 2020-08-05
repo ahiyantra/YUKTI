@@ -24,7 +24,6 @@ for f_variable in folders1:
     copyfile(src_path+str(fileC), dst_path+str(fileC))
     copyfile(src_path+str(fileD), dst_path+str(fileD))
 
-
 os.mkdir("/home/number5/YUKTI/target_2")
 
 folders2 = ["{}".format(x) for x in range(11)]
@@ -107,6 +106,7 @@ for i_variable in index:
         # insert replacement code to get rid of "sunya.py"
 
 """
+tempaddr = folders1[i_variable] + "/";
 retrieved_address = __file__;
 retrieved_address = retrieved_address.replace("sunya.py", "");
 file_path = retrieved_address+"compound_target.dpf";
@@ -120,7 +120,7 @@ fin = open(file_path, "wt");
 fin.write(data);
 fin.close();
 """
-         
+
         os.chdir(folders1[i_variable]);
         
         holderD = "autogrid4 -p "+folders1[i_variable]+"/target.gpf -l "+folders1[i_variable]+"/protein.glg";
@@ -150,6 +150,7 @@ fin.close();
         # insert replacement code to get rid of "sunya.py"
 
 """
+tempaddr = folders2[i_variable] + "/";
 retrieved_address = __file__;
 retrieved_address = retrieved_address.replace("sunya.py", "");
 file_path = retrieved_address+"compound_target.dpf";
@@ -163,7 +164,7 @@ fin = open(file_path, "wt");
 fin.write(data);
 fin.close();
 """
-         
+
         os.chdir(folders2[i_variable]);
         
         holderD = "autogrid4 -p "+folders2[i_variable]+"/target.gpf -l "+folders2[i_variable]+"/protein.glg";
