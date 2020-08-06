@@ -111,12 +111,25 @@ for i_variable in index:
     os.system(holderA);
     holderB = autopython+" "+folders1[i_variable]+"/prepare_dpf4.py -l "+folders1[i_variable]+"/compound_"+str(numbers[i_variable])+".pdbqt -r "+folders1[i_variable]+"/target_1.pdbqt -o \'"+folders1[i_variable]+"/compound_target.dpf\'";
     os.system(holderB);
-    holderC = "python3 "+folders1[i_variable]+"/sunya.py";
-    os.system(holderC);
+    #holderC = "python3 "+folders1[i_variable]+"/sunya.py";
+    #os.system(holderC);
     
     # insert replacement code to get rid of 'sunya.py'
     
-    
+    tempaddr = folders1[i_variable] + "/";
+    #retrieved_address = __file__;
+    #retrieved_address = retrieved_address.replace("sunya.py", "");
+    retrieved_address = tempaddr;
+    file_path = retrieved_address+"compound_target.dpf";
+
+    fin = open(file_path, "rt");
+    data = fin.read();
+    data = data.replace('extended', 'bound');
+    fin.close();
+
+    fin = open(file_path, "wt");
+    fin.write(data);
+    fin.close();
     
     os.chdir(folders1[i_variable]);
     
@@ -141,12 +154,25 @@ for i_variable in index:
     os.system(holderA);
     holderB = autopython+" "+folders2[i_variable]+"/prepare_dpf4.py -l "+folders2[i_variable]+"/compound_"+str(numbers[i_variable])+".pdbqt -r "+folders2[i_variable]+"/target_2.pdbqt -o \'"+folders2[i_variable]+"/compound_target.dpf\'";
     os.system(holderB);
-    holderC = "python3 "+folders2[i_variable]+"/sunya.py";
-    os.system(holderC);
+    #holderC = "python3 "+folders2[i_variable]+"/sunya.py";
+    #os.system(holderC);
     
     # insert replacement code to get rid of 'sunya.py'
     
-    
+    tempaddr = folders2[i_variable] + "/";
+    #retrieved_address = __file__;
+    #retrieved_address = retrieved_address.replace("sunya.py", "");
+    retrieved_address = tempaddr;
+    file_path = retrieved_address+"compound_target.dpf";
+
+    fin = open(file_path, "rt");
+    data = fin.read();
+    data = data.replace('extended', 'bound');
+    fin.close();
+
+    fin = open(file_path, "wt");
+    fin.write(data);
+    fin.close();
     
     os.chdir(folders2[i_variable]);
     
