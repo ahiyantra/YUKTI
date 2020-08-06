@@ -79,8 +79,8 @@ for f_variable in folders:
     copyfile(src_path2+"prepare_gpf4.py", dst_path2+"prepare_gpf4.py");
     copyfile(src_path2+"prepare_dpf4.py", dst_path1+"prepare_dpf4.py");
     copyfile(src_path2+"prepare_dpf4.py", dst_path2+"prepare_dpf4.py");
-    copyfile(src_path2+"sunya.py", dst_path1+"sunya.py");
-    copyfile(src_path2+"sunya.py", dst_path2+"sunya.py");
+    #copyfile(src_path2+"sunya.py", dst_path1+"sunya.py");
+    #copyfile(src_path2+"sunya.py", dst_path2+"sunya.py");
 
 index = list(range(0, 10));
 
