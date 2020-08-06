@@ -2,7 +2,7 @@ import os;
 from shutil import copyfile;
 from shutil import rmtree;
 
-print("\n'YUKTI' (\"yukti.py\" and \"sunya.py\") is running now. Always make sure that you've properly converted all of your targets/proteins and ligands/compounds to the PDBQT file format before using this program in order to avoid any errors.\n\nNote: If you run 'YUKTI' more than once in the same folder/directory for any reason, then make sure to remove everything created during its previous run before you run it again because otherwise it'll all get deleted and also make sure to take a proper look at the \"read me\" file (this program's flexibility will keep improving until its development is complete and the preparations required for using it will keep decreasing).\n");
+print("\n'YUKTI' (\"yukti.py\") is running now. Always make sure that you've properly converted all of your targets/proteins and ligands/compounds to the PDBQT file format before using this program in order to avoid any errors.\n\nNote: If you run 'YUKTI' more than once in the same folder/directory for any reason, then make sure to remove everything created during its previous run before you run it again because otherwise it'll all get deleted and also make sure to take a proper look at the \"read me\" file (this program's flexibility will keep improving until its development is complete and the preparations required for using it will keep decreasing).\n");
 
 judge1 = os.path.exists("/home/number5/YUKTI/target_1");
 
