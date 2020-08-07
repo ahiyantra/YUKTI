@@ -241,12 +241,75 @@ dex = list(range(0, 10));
 take1 = list(range(0, 10));
 take2 = list(range(0, 10));
 
-v1 = sorted(values1);
-v2 = sorted(values2);
+v1 = sorted(values1); #print(values1); print(v1);
+v2 = sorted(values2); #print(values2); print(v2);
+
+numbers1 = list(range(0, 10));
+numbers2 = list(range(0, 10));
+
+repeat1 = [];
+#repeat2 = [];
+repeat3 = [];
 
 for d in dex:
-    take1[d] = "Compound "+str(values1.index(v1[d])+1)+" at "+str(v1[d]);
-    take2[d] = "Compound "+str(values2.index(v2[d])+1)+" at "+str(v2[d]);
+    if d != 0:
+        if numbers1[d-1] == values1.index(v1[d])+1:
+            for i in range(0, len(values1)) : 
+                if values1[i] == v1[d]:
+                    repeat1.append(i);
+            #print("first repeat1: "); print(repeat1);
+            #for i in range(0, len(v1)) : 
+                #if v1[i] == v1[d]:
+                    #repeat2.append(i);
+            #print("first repeat2: "); print(repeat2);
+            numbers1[d] = values1.index(v1[d])+1;
+        else:
+            numbers1[d] = values1.index(v1[d])+1;
+    else:
+        numbers1[d] = values1.index(v1[d])+1;
+
+for i in range(1, len(numbers1)) : 
+    if numbers1[i] == numbers1[i-1]:
+        repeat3.append(i);
+#print("first repeat3: "); print(repeat3);
+
+numbers1[repeat3[0]] = repeat1[1]+1;
+
+#print(values1); print(v1); print(numbers1);
+
+repeat1 = [];
+#repeat2 = [];
+repeat3 = [];
+
+for d in dex:
+    if d != 0:
+        if numbers2[d-1] == values2.index(v2[d])+1:
+            for i in range(0, len(values2)) : 
+                if values2[i] == v2[d]:
+                    repeat1.append(i);
+            #print("second repeat1: "); print(repeat1);
+            #for i in range(0, len(v2)) : 
+                #if v2[i] == v2[d]:
+                    #repeat2.append(i);
+            #print("second repeat2: "); print(repeat2);
+            numbers2[d] = values2.index(v2[d])+1;
+        else:
+            numbers2[d] = values2.index(v2[d])+1;
+    else:
+        numbers2[d] = values2.index(v2[d])+1;
+
+for i in range(1, len(numbers2)) : 
+    if numbers2[i] == numbers2[i-1]:
+        repeat3.append(i);
+#print("second repeat3: "); print(repeat3);
+
+numbers2[repeat3[0]] = repeat1[1]+1;
+
+#print(values2); print(v2); print(numbers2);
+
+for d in dex:
+    take1[d] = "Compound "+str(numbers1[d])+" at "+str(v1[d]);
+    take2[d] = "Compound "+str(numbers2[d])+" at "+str(v2[d]);
 
 print("Top 10 results in our library of ligands for Target 1 in ascending order:");
 for d in dex:
@@ -256,7 +319,7 @@ for d in dex:
     print(str(d+1)+". "+take2[d]);
 print("The result rankings will also be available as \"top_results.txt\" and will be updated every time this program is run.");
 
-os.chdir("/home/number5/YUKTI");
+#os.chdir("/home/number5/BLUEPRINT");
 
 output = open("top_results.txt", "w");
 
