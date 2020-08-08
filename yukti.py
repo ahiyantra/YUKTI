@@ -254,26 +254,33 @@ repeat3 = [];
 for d in dex:
     if d != 0:
         if numbers1[d-1] == values1.index(v1[d])+1:
+            repeat1 = [];
             for i in range(0, len(values1)) : 
                 if values1[i] == v1[d]:
                     repeat1.append(i);
-            #print("first repeat1: "); print(repeat1);
-            #for i in range(0, len(v1)) : 
-                #if v1[i] == v1[d]:
-                    #repeat2.append(i);
-            #print("first repeat2: "); print(repeat2);
             numbers1[d] = values1.index(v1[d])+1;
         else:
             numbers1[d] = values1.index(v1[d])+1;
     else:
         numbers1[d] = values1.index(v1[d])+1;
 
+#print("first repeat1: "); print(repeat1);
+
 for i in range(1, len(numbers1)) : 
     if numbers1[i] == numbers1[i-1]:
         repeat3.append(i);
+
 #print("first repeat3: "); print(repeat3);
 
-numbers1[repeat3[0]] = repeat1[1]+1;
+holdin = 1;
+
+if holdin < len(repeat1):
+    numbers1[repeat3[holdin-1]] = repeat1[holdin]+1;
+
+holdin = 2;
+
+if holdin < len(repeat1):
+    numbers1[repeat3[holdin-1]] = repeat1[holdin]+1;
 
 #print(values1); print(v1); print(numbers1);
 
@@ -284,26 +291,33 @@ repeat3 = [];
 for d in dex:
     if d != 0:
         if numbers2[d-1] == values2.index(v2[d])+1:
+            repeat1 = [];
             for i in range(0, len(values2)) : 
                 if values2[i] == v2[d]:
                     repeat1.append(i);
-            #print("second repeat1: "); print(repeat1);
-            #for i in range(0, len(v2)) : 
-                #if v2[i] == v2[d]:
-                    #repeat2.append(i);
-            #print("second repeat2: "); print(repeat2);
             numbers2[d] = values2.index(v2[d])+1;
         else:
             numbers2[d] = values2.index(v2[d])+1;
     else:
         numbers2[d] = values2.index(v2[d])+1;
 
+#print("second repeat1: "); print(repeat1);
+
 for i in range(1, len(numbers2)) : 
     if numbers2[i] == numbers2[i-1]:
         repeat3.append(i);
+
 #print("second repeat3: "); print(repeat3);
 
-numbers2[repeat3[0]] = repeat1[1]+1;
+holdin = 1;
+
+if holdin < len(repeat1):
+    numbers2[repeat3[holdin-1]] = repeat1[holdin]+1;
+
+holdin = 2;
+
+if holdin < len(repeat1):
+    numbers2[repeat3[holdin-1]] = repeat1[holdin]+1;
 
 #print(values2); print(v2); print(numbers2);
 
