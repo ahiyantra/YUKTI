@@ -242,88 +242,164 @@ take1 = list(range(0, 10));
 take2 = list(range(0, 10));
 
 v1 = sorted(values1); #print(values1); print(v1);
-v2 = sorted(values2); #print(values2); print(v2);
+v11 = sorted(values11); #print(values11); print(v11);
 
 numbers1 = list(range(0, 10));
-numbers2 = list(range(0, 10));
+numbers11 = list(range(0, 10));
 
-repeat1 = [];
-#repeat2 = [];
-repeat3 = [];
+repeat1S = [];
+repeat2S = [];
+repeat1Z = [];
+repeat2Z = [];
 
 for d in dex:
     if d != 0:
         if numbers1[d-1] == values1.index(v1[d])+1:
-            repeat1 = [];
+            #repeat1S = [];
             for i in range(0, len(values1)) : 
                 if values1[i] == v1[d]:
-                    repeat1.append(i);
+                    repeat1S.append(i);
             numbers1[d] = values1.index(v1[d])+1;
         else:
             numbers1[d] = values1.index(v1[d])+1;
     else:
         numbers1[d] = values1.index(v1[d])+1;
 
-#print("first repeat1: "); print(repeat1);
+grrrr = []
 
-for i in range(1, len(numbers1)) : 
+for i in range(0, len(repeat1S)) :
+    j = (len(repeat1S)/2)+i;
+    j = int(j);
+    if j < len(repeat1S):
+        if repeat1S[i] == repeat1S[j]:
+            grrrr.append(j);
+
+for i in range(0, len(grrrr)) :
+    del repeat1S[i];
+
+#print("first repeat1S: "); print(repeat1S); print("first repeat1Z: "); print(repeat1Z);
+
+for i in range(0, len(repeat1S)) :
+    if values1[repeat1S[0]] != values1[repeat1S[-1]]:
+        repeat1Z.insert(0, repeat1S[-1]); # added from front
+        if repeat1S[-1] == repeat1Z[0]:
+            del repeat1S[-1]; # substracted from back
+
+#print("first repeat1S: "); print(repeat1S); print("first repeat1Z: "); print(repeat1Z);
+
+for i in range(1, len(numbers1)) :
     if numbers1[i] == numbers1[i-1]:
-        repeat3.append(i);
+        repeat2S.append(i);
 
-#print("first repeat3: "); print(repeat3);
+#print("first repeat2S: "); print(repeat2S); print("first repeat2Z: "); print(repeat2Z);
+
+for i in range(0, len(repeat2S)) :
+    if v1[repeat2S[0]] != v1[repeat2S[-1]]:
+        repeat2Z.insert(0, repeat2S[-1]); # added from front
+        if repeat2S[-1] == repeat2Z[0]:
+            del repeat2S[-1]; # substracted from back
+
+#print("first repeat2S: "); print(repeat2S); print("first repeat2Z: "); print(repeat2Z);
+
+if repeat1S[0] > repeat1S[1]:
+    repeat1S.sort();
 
 holdin = 1;
 
-if holdin < len(repeat1):
-    numbers1[repeat3[holdin-1]] = repeat1[holdin]+1;
+if holdin < len(repeat1S):
+    numbers1[repeat2S[holdin-1]] = repeat1S[holdin]+1;
+
+if holdin < len(repeat1Z):
+    numbers1[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
 holdin = 2;
 
-if holdin < len(repeat1):
-    numbers1[repeat3[holdin-1]] = repeat1[holdin]+1;
+if holdin < len(repeat1S):
+    numbers1[repeat2S[holdin-1]] = repeat1S[holdin]+1;
+
+if holdin < len(repeat1Z):
+    numbers1[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
 #print(values1); print(v1); print(numbers1);
 
-repeat1 = [];
-#repeat2 = [];
-repeat3 = [];
+repeat1S = [];
+repeat2S = [];
+repeat1Z = [];
+repeat2Z = [];
 
 for d in dex:
     if d != 0:
-        if numbers2[d-1] == values2.index(v2[d])+1:
-            repeat1 = [];
-            for i in range(0, len(values2)) : 
-                if values2[i] == v2[d]:
-                    repeat1.append(i);
-            numbers2[d] = values2.index(v2[d])+1;
+        if numbers11[d-1] == values11.index(v11[d])+1:
+            #repeat1S = [];
+            for i in range(0, len(values11)) : 
+                if values11[i] == v11[d]:
+                    repeat1S.append(i);
+            numbers11[d] = values11.index(v11[d])+1;
         else:
-            numbers2[d] = values2.index(v2[d])+1;
+            numbers11[d] = values11.index(v11[d])+1;
     else:
-        numbers2[d] = values2.index(v2[d])+1;
+        numbers11[d] = values11.index(v11[d])+1;
 
-#print("second repeat1: "); print(repeat1);
+grrrr = []
 
-for i in range(1, len(numbers2)) : 
-    if numbers2[i] == numbers2[i-1]:
-        repeat3.append(i);
+for i in range(0, len(repeat1S)) :
+    j = (len(repeat1S)/2)+i;
+    j = int(j);
+    if j < len(repeat1S):
+        if repeat1S[i] == repeat1S[j]:
+            grrrr.append(j);
 
-#print("second repeat3: "); print(repeat3);
+for i in range(0, len(grrrr)) :
+    del repeat1S[i];
+
+#print("second repeat1S: "); print(repeat1S); print("second repeat1Z: "); print(repeat1Z);
+
+for i in range(0, len(repeat1S)) :
+    if values11[repeat1S[0]] != values11[repeat1S[-1]]:
+        repeat1Z.insert(0, repeat1S[-1]); # added from front
+        if repeat1S[-1] == repeat1Z[0]:
+            del repeat1S[-1]; # substracted from back
+
+#print("second repeat1S: "); print(repeat1S); print("second repeat1Z: "); print(repeat1Z);
+
+for i in range(1, len(numbers11)) :
+    if numbers11[i] == numbers11[i-1]:
+        repeat2S.append(i);
+
+#print("second repeat2S: "); print(repeat2S); print("second repeat2Z: "); print(repeat2Z);
+
+for i in range(0, len(repeat2S)) :
+    if v11[repeat2S[0]] != v11[repeat2S[-1]]:
+        repeat2Z.insert(0, repeat2S[-1]); # added from front
+        if repeat2S[-1] == repeat2Z[0]:
+            del repeat2S[-1]; # substracted from back
+
+#print("second repeat2S: "); print(repeat2S); print("second repeat2Z: "); print(repeat2Z);
+
+if repeat1S[0] > repeat1S[1]:
+    repeat1S.sort();
 
 holdin = 1;
 
-if holdin < len(repeat1):
-    numbers2[repeat3[holdin-1]] = repeat1[holdin]+1;
+if holdin < len(repeat1S):
+    numbers11[repeat2S[holdin-1]] = repeat1S[holdin]+1;
+
+if holdin < len(repeat1Z):
+    numbers11[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
 holdin = 2;
 
-if holdin < len(repeat1):
-    numbers2[repeat3[holdin-1]] = repeat1[holdin]+1;
+if holdin < len(repeat1S):
+    numbers11[repeat2S[holdin-1]] = repeat1S[holdin]+1;
 
-#print(values2); print(v2); print(numbers2);
+if holdin < len(repeat1Z):
+    numbers11[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
+
+#print(values11); print(v11); print(numbers11);
 
 for d in dex:
     take1[d] = "Compound "+str(numbers1[d])+" at "+str(v1[d]);
-    take2[d] = "Compound "+str(numbers2[d])+" at "+str(v2[d]);
+    take2[d] = "Compound "+str(numbers11[d])+" at "+str(v11[d]);
 
 print("Top 10 results in our library of ligands for Target 1 in ascending order:");
 for d in dex:
@@ -331,11 +407,11 @@ for d in dex:
 print("Top 10 results in our library of ligands for Target 2 in ascending order:");
 for d in dex:
     print(str(d+1)+". "+take2[d]);
-print("The result rankings will also be available as \"top_results.txt\" and will be updated every time this program is run.");
+print("The result rankings will also be available as \"kramaka.txt\" and will be updated every time this program is run.");
 
 os.chdir("/home/user/YUKTI");
 
-output = open("top_results.txt", "w");
+output = open("kramaka.txt", "w");
 
 output.write("Top 10 results in our library of ligands for Target 1 in ascending order:\n");
 for d in dex:
