@@ -407,11 +407,11 @@ for d in dex:
 print("Top 10 results in our library of ligands for Target 2 in ascending order:");
 for d in dex:
     print(str(d+1)+". "+take2[d]);
-print("The result rankings will also be available as \"kramaka.txt\" and will be updated every time this program is run.");
+print("The result rankings will also be available as \"top_results.txt\" and will be updated every time this program is run.\n");
 
 os.chdir("/home/user/YUKTI");
 
-output = open("kramaka.txt", "w");
+output = open("top_results.txt", "w");
 
 output.write("Top 10 results in our library of ligands for Target 1 in ascending order:\n");
 for d in dex:
@@ -419,6 +419,6 @@ for d in dex:
 output.write("Top 10 results in our library of ligands for Target 2 in ascending order:\n");
 for d in dex:
     output.write(str(d+1)+". "+take2[d]+"\n");
-output.write("The result rankings will also be presented on the console and will be updated every time this program is run.");
+output.write("The result rankings will also be presented on the console and will be updated every time this program is run.\n");
 
 output.close();
