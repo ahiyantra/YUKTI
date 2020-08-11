@@ -247,6 +247,10 @@ v11 = sorted(values11); #print(values11); print(v11);
 numbers1 = list(range(0, 10));
 numbers11 = list(range(0, 10));
 
+
+# first ranker starts here onwards
+
+
 repeat1S = [];
 repeat2S = [];
 repeat1Z = [];
@@ -287,6 +291,12 @@ for i in range(0, len(repeat1S)) :
         if repeat1S[-1] == repeat1Z[0]:
             del repeat1S[-1]; # substracted from back
 
+for i in range(0, len(repeat1Z)) :
+    if values1[repeat1Z[0]] != values1[repeat1Z[-1]]:
+        repeat1J.insert(0, repeat1Z[-1]); # added from front
+        if repeat1Z[-1] == repeat1J[0]:
+            del repeat1Z[-1]; # substracted from back
+
 #print("first repeat1S: "); print(repeat1S); print("first repeat1Z: "); print(repeat1Z); print("first repeat1J: "); print(repeat1J);
 
 for i in range(1, len(numbers1)) :
@@ -301,6 +311,12 @@ for i in range(0, len(repeat2S)) :
         if repeat2S[-1] == repeat2Z[0]:
             del repeat2S[-1]; # substracted from back
 
+for i in range(0, len(repeat2Z)) :
+    if v1[repeat2Z[0]] != v1[repeat2Z[-1]]:
+        repeat2J.insert(0, repeat2Z[-1]); # added from front
+        if repeat2Z[-1] == repeat2J[0]:
+            del repeat2Z[-1]; # substracted from back
+
 #print("first repeat2S: "); print(repeat2S); print("first repeat2Z: "); print(repeat2Z); print("first repeat2J: "); print(repeat2J);
 
 if repeat1S[0] > repeat1S[1]:
@@ -314,6 +330,9 @@ if holdin < len(repeat1S):
 if holdin < len(repeat1Z):
     numbers1[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
+if holdin < len(repeat1J):
+    numbers1[repeat2J[holdin-1]] = repeat1J[holdin]+1;
+
 holdin = 2;
 
 if holdin < len(repeat1S):
@@ -322,7 +341,14 @@ if holdin < len(repeat1S):
 if holdin < len(repeat1Z):
     numbers1[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
+if holdin < len(repeat1J):
+    numbers1[repeat2J[holdin-1]] = repeat1J[holdin]+1;
+
 #print(values1); print(v1); print(numbers1);
+
+
+# second ranker starts here onwards
+
 
 repeat1S = [];
 repeat2S = [];
@@ -364,6 +390,12 @@ for i in range(0, len(repeat1S)) :
         if repeat1S[-1] == repeat1Z[0]:
             del repeat1S[-1]; # substracted from back
 
+for i in range(0, len(repeat1Z)) :
+    if values11[repeat1Z[0]] != values11[repeat1Z[-1]]:
+        repeat1J.insert(0, repeat1Z[-1]); # added from front
+        if repeat1Z[-1] == repeat1J[0]:
+            del repeat1Z[-1]; # substracted from back
+
 #print("second repeat1S: "); print(repeat1S); print("second repeat1Z: "); print(repeat1Z); print("second repeat1J: "); print(repeat1J);
 
 for i in range(1, len(numbers11)) :
@@ -378,6 +410,12 @@ for i in range(0, len(repeat2S)) :
         if repeat2S[-1] == repeat2Z[0]:
             del repeat2S[-1]; # substracted from back
 
+for i in range(0, len(repeat2Z)) :
+    if v11[repeat2Z[0]] != v11[repeat2Z[-1]]:
+        repeat2J.insert(0, repeat2Z[-1]); # added from front
+        if repeat2Z[-1] == repeat2J[0]:
+            del repeat2Z[-1]; # substracted from back
+
 #print("second repeat2S: "); print(repeat2S); print("second repeat2Z: "); print(repeat2Z); print("second repeat2J: "); print(repeat2J);
 
 if repeat1S[0] > repeat1S[1]:
@@ -391,6 +429,9 @@ if holdin < len(repeat1S):
 if holdin < len(repeat1Z):
     numbers11[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
 
+if holdin < len(repeat1J):
+    numbers11[repeat2J[holdin-1]] = repeat1J[holdin]+1;
+
 holdin = 2;
 
 if holdin < len(repeat1S):
@@ -398,6 +439,9 @@ if holdin < len(repeat1S):
 
 if holdin < len(repeat1Z):
     numbers11[repeat2Z[holdin-1]] = repeat1Z[holdin]+1;
+
+if holdin < len(repeat1J):
+    numbers11[repeat2J[holdin-1]] = repeat1J[holdin]+1;
 
 #print(values11); print(v11); print(numbers11);
 
@@ -411,7 +455,7 @@ for d in dex:
 print("Top 10 results in our library of ligands for Target 2 in ascending order:");
 for d in dex:
     print(str(d+1)+". "+take2[d]);
-print("The result rankings will also be available as \"kramaka.txt\" and will be updated every time this program is run.\n");
+print("The result rankings will also be available as \"top_results.txt\" and will be updated every time this program is run.\n");
 
 os.chdir("/home/user/YUKTI");
 
