@@ -2,7 +2,7 @@ import os;
 from shutil import copyfile;
 from shutil import rmtree;
 
-print("\n'YUKTI' (\"yukti.py\") is running now. Always make sure that you've properly converted all of your targets/proteins and ligands/compounds to the PDBQT file format before using this program in order to avoid any errors.\n\nNote: If you run 'YUKTI' more than once in the same folder/directory for any reason, then make sure to remove everything created during its previous run before you run it again because otherwise it'll all get deleted and also make sure to take a proper look at the \"read me\" file (this program's flexibility will keep improving until its development is complete and the preparations required for using it will keep decreasing).\n");
+print("\nHello user! 'YUKTI' (yukti.py) is running now! Always make sure that you've properly converted all of your targets/proteins & ligands/compounds to the PDBQT file format before using this program in order to avoid any errors!\n\nA recommendation:\n\nIf you run 'YUKTI' more than once in the same folder/directory for any reason, then make sure to remove everything created during its previous run before you run it again because otherwise, it'll all get deleted & also make sure to take a proper look at the \"read me\" file prepared for it. This program's flexibility will keep improving until its development is complete & the preparations required for using it will keep decreasing.\n");
 
 judge1 = os.path.exists("/home/user/YUKTI/target_1");
 
@@ -59,7 +59,7 @@ for f_variable in folders2:
 folders = ["{}".format(x) for x in range(11)];
 del folders[0];
 
-src_path1 = "/home/user/YUKTI/Library-pdbqt/";
+src_path1 = "/home/user/YUKTI/library-pdbqt/";
 
 for f_variable in folders:
     dst_path1 = "/home/user/YUKTI/target_1/"+str(f_variable)+"/";
@@ -67,8 +67,8 @@ for f_variable in folders:
     copyfile(src_path1+"compound_"+str(f_variable)+".pdbqt", dst_path1+"compound_"+str(f_variable)+".pdbqt");
     copyfile(src_path1+"compound_"+str(f_variable)+".pdbqt", dst_path2+"compound_"+str(f_variable)+".pdbqt");
     
-    copyfile("/home/user/YUKTI/Library-pdb/compound_"+str(f_variable)+".pdb", dst_path1+"compound_"+str(f_variable)+".pdb");
-    copyfile("/home/user/YUKTI/Library-pdb/compound_"+str(f_variable)+".pdb", dst_path2+"compound_"+str(f_variable)+".pdb");
+    copyfile("/home/user/YUKTI/library-pdb/compound_"+str(f_variable)+".pdb", dst_path1+"compound_"+str(f_variable)+".pdb");
+    copyfile("/home/user/YUKTI/library-pdb/compound_"+str(f_variable)+".pdb", dst_path2+"compound_"+str(f_variable)+".pdb");
 
 src_path2 = "/home/user/YUKTI/";
 
