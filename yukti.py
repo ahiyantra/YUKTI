@@ -24,7 +24,7 @@ fileC = "target_1.pdb";
 fileD = "target_1.pdbqt";
 
 for f_variable in folders1:
-    dst_path = "/home/user/YUKTI/target_1/"+str(f_variable)+"/";
+    dst_path = "/home/user/YUKTI/target_1/{}/".format(f_variable);
     #copyfile(src_path+str(fileA), dst_path+str(fileA));
     #copyfile(src_path+str(fileB), dst_path+str(fileB));
     copyfile(src_path+str(fileC), dst_path+str(fileC));
@@ -50,7 +50,7 @@ fileC = "target_2.pdb";
 fileD = "target_2.pdbqt";
 
 for f_variable in folders2:
-    dst_path = "/home/user/YUKTI/target_2/"+str(f_variable)+"/";
+    dst_path = "/home/user/YUKTI/target_2/{}/".format(f_variable);
     #copyfile(src_path+str(fileA), dst_path+str(fileA));
     #copyfile(src_path+str(fileB), dst_path+str(fileB));
     copyfile(src_path+str(fileC), dst_path+str(fileC));
@@ -62,8 +62,8 @@ del folders[0];
 src_path1 = "/home/user/YUKTI/library-pdbqt/";
 
 for f_variable in folders:
-    dst_path1 = "/home/user/YUKTI/target_1/"+str(f_variable)+"/";
-    dst_path2 = "/home/user/YUKTI/target_2/"+str(f_variable)+"/";
+    dst_path1 = "/home/user/YUKTI/target_1/{}/".format(f_variable);
+    dst_path2 = "/home/user/YUKTI/target_2/{}/".format(f_variable);
     copyfile(src_path1+"compound_"+str(f_variable)+".pdbqt", dst_path1+"compound_"+str(f_variable)+".pdbqt");
     copyfile(src_path1+"compound_"+str(f_variable)+".pdbqt", dst_path2+"compound_"+str(f_variable)+".pdbqt");
     
@@ -73,8 +73,8 @@ for f_variable in folders:
 src_path2 = "/home/user/YUKTI/";
 
 for f_variable in folders:
-    dst_path1 = "/home/user/YUKTI/target_1/"+str(f_variable)+"/";
-    dst_path2 = "/home/user/YUKTI/target_2/"+str(f_variable)+"/";
+    dst_path1 = "/home/user/YUKTI/target_1/{}/".format(f_variable);
+    dst_path2 = "/home/user/YUKTI/target_2/{}/".format(f_variable);
     copyfile(src_path2+"prepare_gpf4.py", dst_path1+"prepare_gpf4.py");
     copyfile(src_path2+"prepare_gpf4.py", dst_path2+"prepare_gpf4.py");
     copyfile(src_path2+"prepare_dpf4.py", dst_path1+"prepare_dpf4.py");
