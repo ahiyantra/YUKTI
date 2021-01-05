@@ -1,4 +1,4 @@
-# "yukti": a program, intended for the students of computational biology & bioinformatics; helps its users perform an assisted experiment involving molecular docking simulation techniques.
+# "yukti": a program, intended for the students of computational biology & bioinformatics; helps its users perform an assisted experiment involving molecular docking simulation techniques
 
 import os;
 from shutil import copyfile;
