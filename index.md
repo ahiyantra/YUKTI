@@ -19,3 +19,5 @@ Please don't forget to cite the creator if you use this program in any projects 
 4) The scripts "prepare_gpf4.py" and "prepare_dpf4.py" are pre-included in the "AutoDock Tools" installation and were prepared by Scripps Research Institute. As of now, their versions which the creator provides alongside 'YUKTI' ("yukti.py") may be specific to the OS he was using while performing his experiments & preparing his scripts, which is Linux.
 
 5) In file & system addresses, Windows uses "\\" while both Linux and Macintosh use "/". Using the wrong symbol will make the scripts useless by causing errors. While preparing the current version of this program, the creator was using 2 proteins as targets with 10 compounds as ligands. Your number of chosen targets and ligands may be different.
+
+[<return to the main page>](https://ahiyantra.github.io/)
