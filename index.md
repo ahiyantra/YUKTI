@@ -20,4 +20,5 @@ Please don't forget to cite the creator if you use this program in any projects 
 
 5) In file & system addresses, Windows uses "\\" while both Linux and Macintosh use "/". Using the wrong symbol will make the scripts useless by causing errors. While preparing the current version of this program, the creator was using 2 proteins as targets with 10 compounds as ligands. Your number of chosen targets and ligands may be different.
 
-> [return to the main page](https://ahiyantra.github.io/)
+> [return to the main page](https://ahiyantra.github.io)
+> [visit this project on github](https://github.com/ahiyantra/YUKTI)
