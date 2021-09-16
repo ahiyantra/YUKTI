@@ -1,4 +1,4 @@
-# YUKTI
+# 'YUKTI' (yukti.py)
 
 ## introduction:
 
